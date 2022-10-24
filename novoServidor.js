@@ -12,7 +12,7 @@ app.get("/", function(request,response){
 app.get("/login", function(request,response){
         let nome = request.query.nome;
         let sobrenome = request.query.sobrenome;
-        if(nome == undefined)
+        if(nome == undefined){
     response.end("Seja bem-vindo(a) usuario");
  } else{
     response.end("Seja bem-vindo(a)" + nome + "!")
@@ -24,6 +24,6 @@ app.listen(8181, function(erro){
     if(erro){
         console.log(erro);
     }else{
-        console.log("Servidor esta on.....");
+        console.log("Servidor esta ligado.....");
     }
 });
